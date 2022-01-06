@@ -16,11 +16,11 @@ body {
     width: 100%;
     text-align: center;
     padding: 25px;
-    color: #064F19;
+    color: #e7ffe6;
 }
 
 #content {
-    background: #064F19;
+    background: #e7ffe6;
     flex-grow: 1;
     width: 100%;
     display: flex;
@@ -32,17 +32,18 @@ body {
 #calc-body {
     background: rgb(44, 44, 44);
     width: 350px;
-    height: 550px;
-    border-radius: 25px;
+    height: 595px;
+    border-radius: 50px;
     border: 5px solid #3b9953;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     overflow: hidden;
+    box-shadow: 15px -15px 25px 5px rgb(56, 56, 56);
 }
 
 button {
-    background: rgb(185, 185, 185);
+    background: gray;
     min-width: 71px;
     border-radius: 50px;
     border: 5px solid #3b9953;
@@ -52,7 +53,12 @@ button {
     padding: 0;
 }
 
-button#backspace, button#zero {
+button:hover {
+    transform: scale(1.05);
+    border: 5px solid white;
+}
+
+button#zero {
     min-width: 146px;
 }
 
@@ -69,12 +75,25 @@ button#backspace, button#zero {
     justify-content: flex-end;
     align-items: center;
     padding-right: 20px;
-    background: gray;
+    background: rgb(77, 77, 77);
     border-radius: 25px;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     border: 5px solid #3b9953;
 }
 
 #display-text {
-    font-size: 60px;
+    font-size: 36px;
+    overflow-wrap: anywhere;
+}
+
+button[data-type="operation"], button[data-type="equal"] {
+    background: #cc7276c2;
+}
+
+h2 {
+    color: #3b9953;
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-decoration: underline;
+    text-align: right;
 }
